@@ -13,7 +13,6 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
 } from '@/components/ui/sheet';
 
 const navLinks = [
@@ -31,7 +30,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={128} height={32} className="h-8 w-auto" />
+          <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={128} height={32} className="h-8 w-auto" priority />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -57,7 +56,7 @@ export function Header() {
 
         <div className="md:hidden">
            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="h-6 w-6 text-primary" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6 text-primary-foreground" /> : <Menu className="h-6 w-6" />}
               <span className="sr-only">Toggle Menu</span>
             </Button>
         </div>
@@ -66,7 +65,7 @@ export function Header() {
       {/* Mobile Dropdown Menu */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60 overflow-hidden transition-all duration-300 ease-in-out",
+          "md:hidden absolute top-full left-0 w-full bg-primary/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60 overflow-hidden transition-all duration-300 ease-in-out",
           isOpen ? "max-h-screen border-b" : "max-h-0"
         )}
       >
@@ -78,16 +77,16 @@ export function Header() {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:bg-secondary",
-                  pathname === link.href && "bg-secondary text-primary"
+                  "rounded-md px-3 py-2 text-base font-medium text-primary-foreground/80 transition-colors hover:bg-black/10",
+                  pathname === link.href && "bg-black/20 text-primary-foreground"
                 )}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          <div className="p-2 mt-4 border-t">
-              <Button asChild className="w-full">
+          <div className="p-2 mt-4 border-t border-primary-foreground/20">
+              <Button variant="secondary" asChild className="w-full">
                   <Link href="/quote" onClick={() => setIsOpen(false)}>Request a Quote</Link>
               </Button>
           </div>
