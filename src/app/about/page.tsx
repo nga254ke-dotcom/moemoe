@@ -39,7 +39,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="https://picsum.photos/600/500"
+              src="https://i.imgur.com/ALc5YcY.png"
               alt="The founding team of MoeMoe Enterprises"
               data-ai-hint="diverse team meeting"
               width={600}
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <p className="text-muted-foreground">
             Atlanta, Tucker, Decatur, Sandy Springs, Roswell, Marietta, and more.
           </p>
-          <Button size="lg" className="mt-8" asChild>
+          <Button size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
             <Link href="/quote">See if we serve your area</Link>
           </Button>
         </div>
