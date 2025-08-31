@@ -24,7 +24,7 @@ export default function Home() {
       <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <Image
-          src="https://picsum.photos/1920/1080"
+          src="https://i.imgur.com/4jwDIJb.png"
           alt="Atlanta skyline at dusk, representing MoeMoe Enterprises' service area"
           data-ai-hint="Atlanta skyline"
           fill
