@@ -93,7 +93,7 @@ export default function ServicesPage() {
           </div>
           <div className="md:order-1">
             <Image
-              src="https://picsum.photos/600/500"
+              src="https://i.imgur.com/iNxTKaX.png"
               alt="A professional cleaning crew working in an office"
               data-ai-hint="professional cleaning team"
               width={600}
