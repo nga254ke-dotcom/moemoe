@@ -5,9 +5,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -50,44 +49,41 @@ export function Header() {
         </div>
 
         <div className="md:hidden">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
+           <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <span className="sr-only">Toggle Menu</span>
+            </Button>
+        </div>
+      </div>
+      
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={cn(
+          "md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60 overflow-hidden transition-all duration-300 ease-in-out",
+          isOpen ? "max-h-screen border-b" : "max-h-0"
+        )}
+      >
+        <div className="flex flex-col p-4">
+          <nav className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={cn(
+                  "rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:bg-secondary",
+                  pathname === link.href && "bg-secondary text-primary"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="p-2 mt-4 border-t">
+              <Button asChild className="w-full">
+                  <Link href="/quote" onClick={() => setIsOpen(false)}>Request a Quote</Link>
               </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs bg-background p-0">
-               <SheetHeader className="p-4 border-b">
-                  <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
-                   <Link href="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setIsOpen(false)}>
-                      <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={128} height={32} className="h-8 w-auto" />
-                   </Link>
-              </SheetHeader>
-              <div className="flex flex-col h-full">
-                <nav className="flex flex-col gap-1 p-4 flex-1">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        "rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:bg-secondary",
-                        pathname === link.href && "bg-secondary text-primary"
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </nav>
-                 <div className="p-4 mt-auto border-t">
-                    <Button asChild className="w-full">
-                        <Link href="/quote" onClick={() => setIsOpen(false)}>Request a Quote</Link>
-                    </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          </div>
         </div>
       </div>
     </header>
