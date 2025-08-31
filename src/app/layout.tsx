@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://moemoeenterprise.com'),
   title: {
     default: 'MoeMoe Enterprises | Reliable Courier & Cleaning in Atlanta, GA',
     template: '%s | MoeMoe Enterprises',
