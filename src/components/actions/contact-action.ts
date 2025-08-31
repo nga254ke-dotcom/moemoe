@@ -1,7 +1,6 @@
 'use server';
 
 import { z } from 'zod';
-// This is a placeholder. In a real app, you would use a service like Resend or Nodemailer.
 import { sendEmail } from '@/lib/email'; 
 
 const ContactActionSchema = z.object({
@@ -42,7 +41,7 @@ export async function sendContactMessageAction(
     // Send email to admin
     await sendEmail({
       to: 'info@moemoeenterprise.com',
-      from: 'website@moemoeenterprise.com',
+      from: 'orders@moemoeenterprise.com',
       subject: `New Contact Form Message: ${parsed.data.subject}`,
       html: `
         <p>You have received a new message from the website contact form.</p>
@@ -54,10 +53,10 @@ export async function sendContactMessageAction(
       `,
     });
 
-    // Optionally, send a confirmation email to the user
+    // Send a confirmation email to the user
     await sendEmail({
       to: parsed.data.email,
-      from: 'noreply@moemoeenterprise.com',
+      from: 'orders@moemoeenterprise.com',
       subject: 'We have received your message',
       html: `
         <p>Hello ${parsed.data.name},</p>
