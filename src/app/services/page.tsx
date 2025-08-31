@@ -46,9 +46,9 @@ export default function ServicesPage() {
           </div>
           <div>
             <Image
-              src="https://picsum.photos/600/500"
-              alt="A courier navigating through Atlanta traffic"
-              data-ai-hint="courier delivery van"
+              src="https://i.imgur.com/L66wKAW.png"
+              alt="A courier handing a package to a client"
+              data-ai-hint="courier delivery"
               width={600}
               height={500}
               className="rounded-lg shadow-xl object-cover"
