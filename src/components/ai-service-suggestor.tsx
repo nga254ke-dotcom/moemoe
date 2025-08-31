@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { suggestServiceAction, type FormState } from '@/components/actions/suggest-service-action';
 import { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
@@ -26,7 +27,7 @@ function SubmitButton() {
 }
 
 export function AiServiceSuggestor() {
-  const [state, formAction] = useFormState(suggestServiceAction, initialState);
+  const [state, formAction] = useActionState(suggestServiceAction, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
