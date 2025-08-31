@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Rocket, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Button } from './ui/button';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,11 +14,11 @@ export function Footer() {
               <Rocket className="h-8 w-8 text-primary" />
               <div>
                 <span className="text-primary">MoeMoe</span>
-                <span className="font-light text-foreground"> Services Hub</span>
+                <span className="font-light text-foreground"> Enterprises</span>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Fast & Reliable Courier & Cleaning Services in Georgia. Serving Tucker, Atlanta, and surrounding areas.
+              Professional Courier & Cleaning Services for the Greater Atlanta Area.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-muted-foreground hover:text-primary">
@@ -37,24 +38,26 @@ export function Footer() {
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Services</h3>
-                <ul className="mt-4 space-y-4">
-                  <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Courier Services</Link></li>
-                  <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Cleaning Services</Link></li>
-                  <li><Link href="#quote" className="text-sm text-muted-foreground hover:text-primary">Get a Quote</Link></li>
+                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Company</h3>
+                <ul className="mt-4 space-y-3">
+                  <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
+                  <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary">Services</Link></li>
+                  <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Company</h3>
-                <ul className="mt-4 space-y-4">
-                  <li><Link href="#about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
+                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Services</h3>
+                <ul className="mt-4 space-y-3">
+                  <li><Link href="/services#courier" className="text-sm text-muted-foreground hover:text-primary">Courier Services</Link></li>
+                  <li><Link href="/services#cleaning" className="text-sm text-muted-foreground hover:text-primary">Cleaning Services</Link></li>
+                   <li><Link href="/quote" className="text-sm text-muted-foreground hover:text-primary">Get a Quote</Link></li>
                 </ul>
               </div>
             </div>
             <div className="md:grid md:grid-cols-1 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Contact Us</h3>
-                <div className="mt-4 space-y-4 text-sm text-muted-foreground">
+               <div>
+                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Get in Touch</h3>
+                <div className="mt-4 space-y-3 text-sm text-muted-foreground">
                   <p>MoeMoe Enterprises LLC</p>
                   <p>4936 Presidents Way #206, Tucker, GA 30084</p>
                   <p>
