@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer';
 export const metadata: Metadata = {
   metadataBase: new URL('https://moemoeenterprise.com'),
   title: {
-    default: 'MoeMoe Enterprises | Reliable Courier & Cleaning in Atlanta, GA',
+    default: 'MoeMoe Enterprises | Courier & Cleaning in Atlanta',
     template: '%s | MoeMoe Enterprises',
   },
   description: 'MoeMoe Enterprises offers professional courier and cleaning services in Atlanta, Tucker, and surrounding Georgia areas. Get a free quote for fast, reliable service.',
