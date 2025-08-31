@@ -33,7 +33,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-muted-foreground transition-colors hover:text-foreground",
+                "text-muted-foreground transition-colors hover:text-primary",
                 pathname === link.href && "text-primary font-semibold"
               )}
             >
@@ -50,7 +50,7 @@ export function Header() {
 
         <div className="md:hidden">
            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6 text-primary" /> : <Menu className="h-6 w-6" />}
               <span className="sr-only">Toggle Menu</span>
             </Button>
         </div>
