@@ -11,12 +11,12 @@ export function Footer() {
       <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
-              <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={160} height={40} className="h-10 w-auto"/>
-            </Link>
-            <p className="text-sm text-muted-foreground">
-              Professional Courier & Cleaning Services for the Greater Atlanta Area.
-            </p>
+            <div>
+                <h2 className="text-2xl font-bold text-foreground">MoeMoe Enterprises</h2>
+                 <p className="text-sm text-muted-foreground mt-2">
+                    Professional Courier & Cleaning Services for the Greater Atlanta Area.
+                </p>
+            </div>
             <div className="flex space-x-6">
               <a href="#" className="text-muted-foreground hover:text-primary">
                 <span className="sr-only">Facebook</span>
