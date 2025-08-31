@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -23,8 +24,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <Rocket className="h-7 w-7 text-primary" />
-          <span className="font-headline text-xl">MoeMoe Enterprises</span>
+          <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={128} height={32} className="h-8 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -60,8 +60,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center p-4 border-b">
                    <Link href="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setIsOpen(false)}>
-                      <Rocket className="h-6 w-6 text-primary" />
-                      <span className="font-headline">MoeMoe</span>
+                      <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={128} height={32} className="h-8 w-auto" />
                    </Link>
                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                       <X className="h-6 w-6" />

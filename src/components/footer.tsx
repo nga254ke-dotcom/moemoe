@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Rocket, Twitter, Facebook, Instagram } from 'lucide-react';
+import Image from 'next/image';
+import { Twitter, Facebook, Instagram } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Footer() {
@@ -11,11 +12,7 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
-              <Rocket className="h-8 w-8 text-primary" />
-              <div>
-                <span className="text-primary">MoeMoe</span>
-                <span className="font-light text-foreground"> Enterprises</span>
-              </div>
+              <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={160} height={40} className="h-10 w-auto"/>
             </Link>
             <p className="text-sm text-muted-foreground">
               Professional Courier & Cleaning Services for the Greater Atlanta Area.
