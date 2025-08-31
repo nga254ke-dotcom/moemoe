@@ -39,13 +39,10 @@ export async function requestQuoteAction(
   const { name, email, phone, service, address, details } = parsed.data;
 
   try {
-    // Here you would typically save the quote request to your database.
-    // For now, we will just send an email notification.
-    
     // Send email to admin
     await sendEmail({
-      to: 'quotes@moemoeenterprise.com',
-      from: 'website-quote-bot@moemoeenterprise.com',
+      to: 'info@moemoeenterprise.com',
+      from: 'orders@moemoeenterprise.com',
       subject: `New Quote Request: ${service}`,
       html: `
         <h1>New Quote Request</h1>
@@ -69,12 +66,12 @@ export async function requestQuoteAction(
     // Send confirmation email to the user
     await sendEmail({
       to: email,
-      from: 'noreply@moemoeenterprise.com',
-      subject: 'Your Quote Request has been received!',
+      from: 'orders@moemoeenterprise.com',
+      subject: 'Your Quote Request has been Received!',
       html: `
         <p>Hello ${name},</p>
         <p>Thank you for requesting a quote from MoeMoe Enterprises. We have received your request and our team will review it shortly.</p>
-        <p>We will get back to you with a personalized quote at <strong>${email}</strong> within one business day.</p>
+        <p>We appreciate your interest and will get back to you with a personalized quote as soon as possible.</p>
         <p>Best regards,<br/>The MoeMoe Enterprises Team</p>
       `,
     });

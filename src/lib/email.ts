@@ -1,9 +1,8 @@
-/**
- * NOTE: This is a placeholder for a real email sending service.
- * In a production application, you would integrate with a service like
- * AWS SES, Resend, SendGrid, or use Nodemailer with an SMTP provider.
- * This function simulates sending an email by logging it to the console.
- */
+'use server';
+
+import nodemailer from 'nodemailer';
+import 'dotenv/config';
+
 interface EmailPayload {
   to: string;
   from: string;
@@ -11,16 +10,40 @@ interface EmailPayload {
   html: string;
 }
 
+const smtpConfig = {
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: Number(process.env.SMTP_PORT) === 465, // true for 465, false for other ports
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+};
+
+const transporter = nodemailer.createTransport(smtpConfig);
+
 export async function sendEmail(payload: EmailPayload): Promise<void> {
-  console.log("--- SIMULATING EMAIL SEND ---");
-  console.log(`To: ${payload.to}`);
-  console.log(`From: ${payload.from}`);
-  console.log(`Subject: ${payload.subject}`);
-  console.log("Body (HTML):");
-  console.log(payload.html);
-  console.log("--- END OF SIMULATED EMAIL ---");
-  
-  // In a real implementation, this would throw an error on failure.
-  // Here we just resolve the promise to simulate success.
-  return Promise.resolve();
+  // Verify connection configuration
+  try {
+    await transporter.verify();
+    console.log("Server is ready to take our messages");
+  } catch(error) {
+     console.error("Error verifying email transporter:", error);
+     throw new Error("Email server connection failed.");
+  }
+
+  try {
+    const info = await transporter.sendMail({
+        from: `"${payload.from.split('@')[0]}" <${process.env.SMTP_USER}>`, // sender address
+        to: payload.to, // list of receivers
+        subject: payload.subject, // Subject line
+        html: payload.html, // html body
+    });
+    console.log("Message sent: %s", info.messageId);
+  } catch (error) {
+    console.error("Error sending email:", error);
+    // In a real implementation, you'd want more robust error handling
+    // and maybe a retry mechanism.
+    throw new Error("Failed to send email.");
+  }
 }
