@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-secondary py-16 md:py-20">
+      <section className="bg-secondary py-12 md:py-20">
         <div className="container max-w-7xl text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">About MoeMoe Enterprises</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
@@ -24,7 +24,7 @@ export default function AboutPage() {
       </section>
       
       {/* Our Story Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Story: From a Simple Idea to a Trusted Service</h2>
@@ -52,7 +52,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Values Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-12 md:py-20 bg-secondary">
         <div className="container max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Guiding Principles</h2>
@@ -60,7 +60,7 @@ export default function AboutPage() {
               Our mission and values are the foundation of everything we do.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center p-6 border rounded-lg bg-background">
               <div className="p-4 bg-primary/10 rounded-full mb-4">
                 <Target className="h-10 w-10 text-primary" />
@@ -93,7 +93,7 @@ export default function AboutPage() {
       </section>
 
       {/* Service Area Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container max-w-4xl text-center">
            <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
           <h2 className="text-3xl md:text-4xl font-headline font-bold">Serving the Heart of Georgia</h2>
