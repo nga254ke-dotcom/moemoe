@@ -1,75 +1,49 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Twitter, Facebook, Instagram } from 'lucide-react';
-import { Button } from './ui/button';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-secondary text-secondary-foreground" id="contact">
-      <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <div>
-                <h2 className="text-2xl font-bold text-foreground">MoeMoe Enterprises</h2>
-                 <p className="text-sm text-muted-foreground mt-2">
-                    Professional Courier & Cleaning Services for the Greater Atlanta Area.
-                </p>
-            </div>
-            <div className="flex space-x-6">
-              <a href="#" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Facebook</span>
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Instagram</span>
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Twitter</span>
-                <Twitter className="h-6 w-6" />
-              </a>
-            </div>
+      <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="space-y-8 text-center">
+          <div>
+              <h2 className="text-2xl font-bold text-foreground">MoeMoe Enterprises</h2>
+               <p className="text-sm text-muted-foreground mt-2 max-w-md mx-auto">
+                  Professional Courier & Cleaning Services for the Greater Atlanta Area.
+              </p>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Company</h3>
-                <ul className="mt-4 space-y-3">
-                  <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
-                  <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary">Services</Link></li>
-                  <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Services</h3>
-                <ul className="mt-4 space-y-3">
-                  <li><Link href="/services#courier" className="text-sm text-muted-foreground hover:text-primary">Courier Services</Link></li>
-                  <li><Link href="/services#cleaning" className="text-sm text-muted-foreground hover:text-primary">Cleaning Services</Link></li>
-                   <li><Link href="/quote" className="text-sm text-muted-foreground hover:text-primary">Get a Quote</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-1 md:gap-8">
-               <div>
-                <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Get in Touch</h3>
-                <div className="mt-4 space-y-3 text-sm text-muted-foreground">
-                  <p>MoeMoe Enterprises LLC</p>
-                  <p>4936 Presidents Way #206, Tucker, GA 30084</p>
-                  <p>
-                    <a href="tel:404-375-9495" className="hover:text-primary">404-375-9495</a>
-                  </p>
-                  <p>
-                    <a href="mailto:info@moemoeenterprise.com" className="hover:text-primary">info@moemoeenterprise.com</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+          
+          <nav className="flex justify-center flex-wrap gap-x-6 gap-y-2" aria-label="Footer">
+            <Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link>
+            <Link href="/services" className="text-sm text-muted-foreground hover:text-primary">Services</Link>
+            <Link href="/quote" className="text-sm text-muted-foreground hover:text-primary">Get a Quote</Link>
+            <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link>
+          </nav>
+          
+          <div className="flex justify-center space-x-6">
+            <a href="#" className="text-muted-foreground hover:text-primary">
+              <span className="sr-only">Facebook</span>
+              <Facebook className="h-6 w-6" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary">
+              <span className="sr-only">Instagram</span>
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary">
+              <span className="sr-only">Twitter</span>
+              <Twitter className="h-6 w-6" />
+            </a>
           </div>
         </div>
-        <div className="mt-12 border-t pt-8">
-          <p className="text-sm text-muted-foreground text-center">&copy; {currentYear} MoeMoe Enterprises LLC. All rights reserved.</p>
+        
+        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground space-y-2">
+            <p>MoeMoe Enterprises LLC | 4936 Presidents Way #206, Tucker, GA 30084</p>
+            <p>
+                <a href="tel:404-375-9495" className="hover:text-primary">404-375-9495</a> | <a href="mailto:info@moemoeenterprise.com" className="hover:text-primary">info@moemoeenterprise.com</a>
+            </p>
+          <p>&copy; {currentYear} MoeMoe Enterprises LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
