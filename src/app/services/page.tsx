@@ -15,7 +15,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-primary text-primary-foreground py-12 md:py-20">
+      <section className="bg-primary text-primary-foreground py-16 md:py-20">
         <div className="container max-w-7xl text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Professional Services</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">
@@ -25,7 +25,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Courier Services Section */}
-      <section id="courier" className="py-12 md:py-20 bg-background">
+      <section id="courier" className="py-16 md:py-20 bg-background">
         <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
              <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full">
@@ -52,14 +52,14 @@ export default function ServicesPage() {
               data-ai-hint="courier delivery"
               width={600}
               height={500}
-              className="rounded-lg shadow-xl object-cover"
+              className="rounded-lg shadow-xl object-cover w-full h-auto"
             />
           </div>
         </div>
       </section>
 
       {/* Cleaning Services Section */}
-      <section id="cleaning" className="py-12 md:py-20 bg-secondary">
+      <section id="cleaning" className="py-16 md:py-20 bg-secondary">
         <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
           <div className="md:order-2 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full">
@@ -99,7 +99,7 @@ export default function ServicesPage() {
               data-ai-hint="professional cleaning team"
               width={600}
               height={500}
-              className="rounded-lg shadow-xl object-cover"
+              className="rounded-lg shadow-xl object-cover w-full h-auto"
             />
           </div>
         </div>
