@@ -105,7 +105,7 @@ export default function AboutPage() {
           <p className="text-muted-foreground">
             Atlanta, Tucker, Decatur, Sandy Springs, Roswell, Marietta, and more.
           </p>
-          <Button size="lg" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+          <Button size="lg" className="mt-8" asChild>
             <Link href="/quote">See if we serve your area</Link>
           </Button>
         </div>
