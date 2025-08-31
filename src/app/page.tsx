@@ -190,7 +190,7 @@ export default function Home() {
           <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">
             Let's discuss how MoeMoe Enterprises can help you. Request a no-obligation quote today and experience the difference of working with a truly professional team.
           </p>
-          <Button size="lg" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6" asChild>
+          <Button size="lg" className="mt-8 bg-background hover:bg-background/90 text-primary text-lg px-8 py-6" asChild>
             <Link href="/quote">Request a Free Quote</Link>
           </Button>
         </div>
