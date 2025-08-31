@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { QuoteForm } from '@/components/quote-form';
 
@@ -10,7 +11,7 @@ export default function QuotePage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-secondary py-16 md:py-24">
+      <section className="bg-secondary py-16 md:py-20">
         <div className="container max-w-7xl text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Request a Free Quote</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
@@ -20,7 +21,7 @@ export default function QuotePage() {
       </section>
 
       {/* Quote Form Section */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <QuoteForm />
         </div>

@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -14,7 +15,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-primary text-primary-foreground py-16 md:py-24">
+      <section className="bg-primary text-primary-foreground py-16 md:py-20">
         <div className="container max-w-7xl text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Contact Us</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">
@@ -23,7 +24,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-7xl">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
