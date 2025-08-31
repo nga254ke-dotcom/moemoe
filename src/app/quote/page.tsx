@@ -1,6 +1,7 @@
 
 import type { Metadata } from 'next';
 import { QuoteForm } from '@/components/quote-form';
+import { ScrollAnimation } from '@/components/scroll-animation';
 
 export const metadata: Metadata = {
   title: 'Request a Quote',
@@ -13,17 +14,21 @@ export default function QuotePage() {
       {/* Page Header */}
       <section className="bg-secondary py-12 md:py-20">
         <div className="container max-w-7xl text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold">Request a Free Quote</h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
-            Get a fast, accurate, and no-obligation quote for your service needs. We'll get back to you promptly to discuss the details.
-          </p>
+          <ScrollAnimation>
+            <h1 className="text-4xl md:text-5xl font-headline font-bold">Request a Free Quote</h1>
+            <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">
+              Get a fast, accurate, and no-obligation quote for your service needs. We'll get back to you promptly to discuss the details.
+            </p>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Quote Form Section */}
       <section className="py-16 md:py-20 bg-background">
         <div className="container max-w-4xl">
-          <QuoteForm />
+          <ScrollAnimation>
+            <QuoteForm />
+          </ScrollAnimation>
         </div>
       </section>
     </>

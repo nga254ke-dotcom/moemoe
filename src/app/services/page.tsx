@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Truck, Sparkles, ArrowRight, Building, Home } from 'lucide-react';
+import { ScrollAnimation } from '@/components/scroll-animation';
 
 export const metadata: Metadata = {
   title: 'Our Services',
@@ -17,17 +18,19 @@ export default function ServicesPage() {
       {/* Page Header */}
       <section className="bg-primary text-primary-foreground py-12 md:py-20">
         <div className="container max-w-7xl text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Professional Services</h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">
-            Dedicated solutions designed to meet your business and personal needs with reliability and excellence.
-          </p>
+          <ScrollAnimation>
+            <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Professional Services</h1>
+            <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">
+              Dedicated solutions designed to meet your business and personal needs with reliability and excellence.
+            </p>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Courier Services Section */}
-      <section id="courier" className="py-12 md:py-20 bg-background">
+      <section id="courier" className="py-12 md:py-20 bg-background overflow-hidden">
         <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4">
+          <ScrollAnimation className="space-y-4">
              <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full">
               <Truck className="h-5 w-5" />
               Courier Services
@@ -44,8 +47,8 @@ export default function ServicesPage() {
             <Button size="lg" asChild className="mt-4">
               <Link href="/quote?service=courier">Get a Courier Quote</Link>
             </Button>
-          </div>
-          <div>
+          </ScrollAnimation>
+          <ScrollAnimation delay={200}>
             <Image
               src="https://i.imgur.com/L66wKAW.png"
               alt="A courier handing a package to a client"
@@ -54,14 +57,14 @@ export default function ServicesPage() {
               height={500}
               className="rounded-lg shadow-xl object-cover w-full h-auto"
             />
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Cleaning Services Section */}
-      <section id="cleaning" className="py-12 md:py-20 bg-secondary">
+      <section id="cleaning" className="py-12 md:py-20 bg-secondary overflow-hidden">
         <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
-          <div className="md:order-2 space-y-4">
+          <ScrollAnimation className="md:order-2 space-y-4" delay={200}>
             <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full">
               <Sparkles className="h-5 w-5" />
               Cleaning Services
@@ -91,8 +94,8 @@ export default function ServicesPage() {
              <Button size="lg" asChild className="mt-4">
               <Link href="/quote?service=cleaning">Get a Cleaning Quote</Link>
             </Button>
-          </div>
-          <div className="md:order-1">
+          </ScrollAnimation>
+          <ScrollAnimation className="md:order-1">
             <Image
               src="https://i.imgur.com/iNxTKaX.png"
               alt="A professional cleaning crew working in an office"
@@ -101,7 +104,7 @@ export default function ServicesPage() {
               height={500}
               className="rounded-lg shadow-xl object-cover w-full h-auto"
             />
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
     </>
