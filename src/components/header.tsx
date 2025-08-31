@@ -1,10 +1,11 @@
+
 "use client";
 
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
@@ -57,35 +58,29 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background p-0">
-               <SheetHeader className="sr-only">
-                  <SheetTitle>Mobile Navigation Menu</SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col h-full">
-                <div className="flex justify-between items-center p-4 border-b">
+               <SheetHeader className="p-4 border-b">
+                  <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                    <Link href="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setIsOpen(false)}>
                       <Image src="https://i.imgur.com/3euCN8r.png" alt="MoeMoe Enterprises Logo" width={128} height={32} className="h-8 w-auto" />
                    </Link>
-                   <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                      <X className="h-6 w-6" />
-                      <span className="sr-only">Close Menu</span>
-                   </Button>
-                </div>
-                <nav className="flex flex-col gap-4 p-4 flex-1">
+              </SheetHeader>
+              <div className="flex flex-col h-full">
+                <nav className="flex flex-col gap-1 p-4 flex-1">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "text-lg font-medium text-foreground/80 transition-colors hover:text-foreground",
-                        pathname === link.href && "text-primary"
+                        "rounded-md px-3 py-2 text-base font-medium text-foreground/80 transition-colors hover:bg-secondary",
+                        pathname === link.href && "bg-secondary text-primary"
                       )}
                     >
                       {link.label}
                     </Link>
                   ))}
                 </nav>
-                 <div className="p-4 border-t">
+                 <div className="p-4 mt-auto border-t">
                     <Button asChild className="w-full">
                         <Link href="/quote" onClick={() => setIsOpen(false)}>Request a Quote</Link>
                     </Button>

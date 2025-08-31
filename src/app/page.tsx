@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview Section */}
-      <section id="services" className="py-16 md:py-20 bg-secondary">
+      <section id="services" className="py-12 md:py-20 bg-secondary">
         <div className="container max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Professional Services</h2>
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="py-16 md:py-20 bg-background">
+      <section id="why-choose-us" className="py-12 md:py-20 bg-background">
         <div className="container max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Atlanta Chooses MoeMoe</h2>
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-20 bg-secondary">
+      <section className="py-12 md:py-20 bg-secondary">
         <div className="container max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Atlanta Clients Say</h2>
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-primary text-primary-foreground">
+      <section className="py-12 md:py-20 bg-primary text-primary-foreground">
         <div className="container max-w-5xl text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">Ready to Get Started?</h2>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">

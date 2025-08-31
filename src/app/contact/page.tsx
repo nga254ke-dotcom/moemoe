@@ -1,9 +1,8 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { ContactForm } from '@/components/contact-form';
 
 export const metadata: Metadata = {
@@ -15,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-primary text-primary-foreground py-16 md:py-20">
+      <section className="bg-primary text-primary-foreground py-12 md:py-20">
         <div className="container max-w-7xl text-center">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Contact Us</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-primary-foreground/80">
