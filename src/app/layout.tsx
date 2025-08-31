@@ -1,9 +1,9 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://moemoeenterprise.com'),
@@ -68,7 +68,6 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
-        <SpeedInsights />
       </body>
     </html>
   );
