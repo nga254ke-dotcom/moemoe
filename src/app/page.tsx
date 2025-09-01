@@ -29,10 +29,10 @@ export default function Home() {
         <div className="container relative z-20 max-w-4xl px-4 flex flex-col items-center">
           <ScrollAnimation>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-extrabold tracking-tight leading-tight">
-              Your Trusted Partner for Courier & Cleaning in Atlanta
+              Your trusted partner for Moving/Courier & Cleaning Services in Metro Atlanta
             </h1>
             <p className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl">
-              MoeMoe Enterprises delivers peace of mind with fast, reliable courier services and spotless, professional cleaning solutions.
+              MoeMoe Enterprises delivers peace of mind with fast, reliable moving, courier, and spotless, professional cleaning solutions.
             </p>
             <Button size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6" asChild>
               <Link href="/quote">Get Your Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
