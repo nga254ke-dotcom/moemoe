@@ -62,6 +62,43 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MoeMoe Enterprises",
+  "image": "https://moemoeenterprise.com/og-image.png",
+  "@id": "https://moemoeenterprise.com",
+  "url": "https://moemoeenterprise.com",
+  "telephone": "404-375-9495",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4936 Presidents Way #206",
+    "addressLocality": "Tucker",
+    "addressRegion": "GA",
+    "postalCode": "30084",
+    "addressCountry": "US"
+  },
+  "description": "MoeMoe Enterprises offers professional courier and cleaning services in Atlanta, Tucker, and surrounding Georgia areas.",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.8548,
+    "longitude": -84.2188
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,6 +106,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={cn("font-body antialiased bg-background text-foreground", fontBody.variable, fontHeadline.variable)}>
         <div className="flex flex-col min-h-screen">
           <Header />
