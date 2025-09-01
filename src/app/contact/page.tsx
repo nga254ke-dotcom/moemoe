@@ -31,10 +31,11 @@ export default function ContactPage() {
           <ScrollAnimation>
             <div className="grid md:grid-cols-2 gap-12">
               {/* Contact Information */}
-              <div className="space-y-8">
+              <div className="space-y-8" itemScope itemType="http://schema.org/LocalBusiness">
                 <div>
                   <h2 className="text-3xl font-bold font-headline">Get in Touch Directly</h2>
                   <p className="mt-2 text-muted-foreground">Find us at our office, give us a call, or send an email.</p>
+                  <span itemProp="name" className="sr-only">MoeMoe Enterprises LLC</span>
                 </div>
                 <Card>
                   <CardHeader>
@@ -43,9 +44,13 @@ export default function ContactPage() {
                       Our Office
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-muted-foreground">
-                    <p>MoeMoe Enterprises LLC</p>
-                    <p>4936 Presidents Way #206, Tucker, GA 30084</p>
+                  <CardContent itemProp="address" itemScope itemType="http://schema.org/PostalAddress" className="space-y-2 text-muted-foreground">
+                    <p itemProp="streetAddress">4936 Presidents Way #206</p>
+                    <p>
+                      <span itemProp="addressLocality">Tucker</span>, 
+                      <span itemProp="addressRegion"> GA</span>{' '}
+                      <span itemProp="postalCode">30084</span>
+                    </p>
                   </CardContent>
                 </Card>
                 <div className="grid sm:grid-cols-2 gap-8">
@@ -57,7 +62,7 @@ export default function ContactPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <a href="tel:404-375-9495" className="text-muted-foreground hover:text-primary">
+                      <a itemProp="telephone" href="tel:404-375-9495" className="text-muted-foreground hover:text-primary">
                         (404) 375-9495
                       </a>
                     </CardContent>
@@ -70,7 +75,7 @@ export default function ContactPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <a href="mailto:info@moemoeenterprise.com" className="text-muted-foreground hover:text-primary break-all">
+                      <a itemProp="email" href="mailto:info@moemoeenterprise.com" className="text-muted-foreground hover:text-primary break-all">
                         info@moemoeenterprise.com
                       </a>
                     </CardContent>
