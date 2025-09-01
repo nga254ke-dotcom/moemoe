@@ -55,56 +55,52 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Values Section */}
-      <section className="py-12 md:py-20 bg-secondary">
-        <div className="container max-w-7xl">
-          <ScrollAnimation className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Guiding Principles</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our mission and values are the foundation of everything we do.
-            </p>
-          </ScrollAnimation>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <ScrollAnimation>
-              <div className="flex flex-col items-center p-6 border rounded-lg bg-background h-full">
-                <div className="p-4 bg-primary/10 rounded-full mb-4">
-                  <Target className="h-10 w-10 text-primary" />
+      <ScrollAnimation>
+        <section className="py-12 md:py-20 bg-secondary">
+          <div className="container max-w-7xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Guiding Principles</h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                Our mission and values are the foundation of everything we do.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div className="flex flex-col items-center p-6 border rounded-lg bg-background h-full">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4">
+                    <Target className="h-10 w-10 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Our Mission</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    To deliver exceptional courier and cleaning services that empower our clients, built on a foundation of reliability, efficiency, and unwavering customer care.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold">Our Mission</h3>
-                <p className="mt-2 text-muted-foreground">
-                  To deliver exceptional courier and cleaning services that empower our clients, built on a foundation of reliability, efficiency, and unwavering customer care.
-                </p>
-              </div>
-            </ScrollAnimation>
-            <ScrollAnimation delay={200}>
-              <div className="flex flex-col items-center p-6 border rounded-lg bg-background h-full">
-                <div className="p-4 bg-primary/10 rounded-full mb-4">
-                  <Users className="h-10 w-10 text-primary" />
+                <div className="flex flex-col items-center p-6 border rounded-lg bg-background h-full">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4">
+                    <Users className="h-10 w-10 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Our Values</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Integrity, Professionalism, Punctuality, and a Commitment to Excellence are the pillars that guide our team and our work every single day.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold">Our Values</h3>
-                <p className="mt-2 text-muted-foreground">
-                  Integrity, Professionalism, Punctuality, and a Commitment to Excellence are the pillars that guide our team and our work every single day.
-                </p>
-              </div>
-            </ScrollAnimation>
-             <ScrollAnimation delay={400}>
-               <div className="flex flex-col items-center p-6 border rounded-lg bg-background h-full">
-                <div className="p-4 bg-primary/10 rounded-full mb-4">
-                  <Heart className="h-10 w-10 text-primary" />
+                 <div className="flex flex-col items-center p-6 border rounded-lg bg-background h-full">
+                  <div className="p-4 bg-primary/10 rounded-full mb-4">
+                    <Heart className="h-10 w-10 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Our Promise</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    We promise to treat your business and property as our own, delivering a service that not only meets but exceeds your expectations for quality and care.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold">Our Promise</h3>
-                <p className="mt-2 text-muted-foreground">
-                  We promise to treat your business and property as our own, delivering a service that not only meets but exceeds your expectations for quality and care.
-                </p>
-              </div>
-            </ScrollAnimation>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* Service Area Section */}
-      <section className="py-12 md:py-20 bg-background">
-        <div className="container max-w-4xl text-center">
-           <ScrollAnimation>
+      <ScrollAnimation>
+        <section className="py-12 md:py-20 bg-background">
+          <div className="container max-w-4xl text-center">
              <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Serving the Heart of Georgia</h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -119,9 +115,9 @@ export default function AboutPage() {
             <Button size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
               <Link href="/quote">See if we serve your area</Link>
             </Button>
-          </ScrollAnimation>
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollAnimation>
     </>
   );
 }

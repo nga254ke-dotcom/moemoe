@@ -102,14 +102,14 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="py-12 md:py-20 bg-background">
-        <div className="container max-w-7xl">
-          <ScrollAnimation className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Atlanta Chooses MoeMoe</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Your satisfaction is our priority. We are committed to excellence in every job we undertake.</p>
-          </ScrollAnimation>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-            <ScrollAnimation>
+      <ScrollAnimation>
+        <section id="why-choose-us" className="py-12 md:py-20 bg-background">
+          <div className="container max-w-7xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Atlanta Chooses MoeMoe</h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Your satisfaction is our priority. We are committed to excellence in every job we undertake.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
               <div className="flex flex-col items-center">
                 <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
                   <ShieldCheck className="h-10 w-10 text-primary" />
@@ -119,8 +119,6 @@ export default function Home() {
                   Licensed and insured, you can trust us to handle your needs with integrity and professionalism.
                 </p>
               </div>
-            </ScrollAnimation>
-            <ScrollAnimation delay={200}>
               <div className="flex flex-col items-center">
                 <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
                   <Clock className="h-10 w-10 text-primary" />
@@ -130,8 +128,6 @@ export default function Home() {
                   We value your time. Our services are prompt and efficient, ensuring we meet your deadlines, every time.
                 </p>
               </div>
-            </ScrollAnimation>
-            <ScrollAnimation delay={400}>
               <div className="flex flex-col items-center">
                 <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
                   <Users className="h-10 w-10 text-primary" />
@@ -141,22 +137,22 @@ export default function Home() {
                   We tailor our services to your specific requirements and are always here to help. Your needs come first.
                 </p>
               </div>
-            </ScrollAnimation>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* Testimonials Section */}
-      <section className="py-12 md:py-20 bg-secondary">
-        <div className="container max-w-7xl">
-          <ScrollAnimation className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Atlanta Clients Say</h2>
-          </ScrollAnimation>
-          <ScrollAnimation>
+      <ScrollAnimation>
+        <section className="py-12 md:py-20 bg-secondary">
+          <div className="container max-w-7xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Atlanta Clients Say</h2>
+            </div>
             <TestimonialsCarousel />
-          </ScrollAnimation>
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollAnimation>
       
       {/* CTA Section */}
       <section className="py-12 md:py-20 bg-primary text-primary-foreground">

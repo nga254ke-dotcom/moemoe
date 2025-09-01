@@ -62,51 +62,53 @@ export default function ServicesPage() {
       </section>
 
       {/* Cleaning Services Section */}
-      <section id="cleaning" className="py-12 md:py-20 bg-secondary overflow-hidden">
-        <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
-          <ScrollAnimation className="md:order-2 space-y-4" delay={200}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full">
-              <Sparkles className="h-5 w-5" />
-              Cleaning Services
+      <ScrollAnimation>
+        <section id="cleaning" className="py-12 md:py-20 bg-secondary overflow-hidden">
+          <div className="container max-w-7xl grid md:grid-cols-2 gap-12 items-center">
+            <div className="md:order-2 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full">
+                <Sparkles className="h-5 w-5" />
+                Cleaning Services
+              </div>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Immaculate Spaces, Professional Service</h2>
+              <p className="text-lg text-muted-foreground">
+                A clean environment is essential for productivity and well-being. Our expert cleaning crews use top-quality products and equipment to deliver a spotless finish for your commercial or residential property.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><Building className="h-6 w-6 text-primary"/>Commercial</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Office buildings, retail spaces, and other business facilities.</p>
+                  </CardContent>
+                </Card>
+                 <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2"><Home className="h-6 w-6 text-primary"/>Residential</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Apartment move-in/out cleaning and deep cleaning services.</p>
+                  </CardContent>
+                </Card>
+              </div>
+               <Button size="lg" asChild className="mt-4">
+                <Link href="/quote?service=cleaning">Get a Cleaning Quote</Link>
+              </Button>
             </div>
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Immaculate Spaces, Professional Service</h2>
-            <p className="text-lg text-muted-foreground">
-              A clean environment is essential for productivity and well-being. Our expert cleaning crews use top-quality products and equipment to deliver a spotless finish for your commercial or residential property.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2"><Building className="h-6 w-6 text-primary"/>Commercial</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">Office buildings, retail spaces, and other business facilities.</p>
-                </CardContent>
-              </Card>
-               <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2"><Home className="h-6 w-6 text-primary"/>Residential</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">Apartment move-in/out cleaning and deep cleaning services.</p>
-                </CardContent>
-              </Card>
+            <div className="md:order-1">
+              <Image
+                src="https://i.imgur.com/iNxTKaX.png"
+                alt="A professional cleaning crew working in an office"
+                data-ai-hint="professional cleaning team"
+                width={600}
+                height={500}
+                className="rounded-lg shadow-xl object-cover w-full h-auto"
+              />
             </div>
-             <Button size="lg" asChild className="mt-4">
-              <Link href="/quote?service=cleaning">Get a Cleaning Quote</Link>
-            </Button>
-          </ScrollAnimation>
-          <ScrollAnimation className="md:order-1">
-            <Image
-              src="https://i.imgur.com/iNxTKaX.png"
-              alt="A professional cleaning crew working in an office"
-              data-ai-hint="professional cleaning team"
-              width={600}
-              height={500}
-              className="rounded-lg shadow-xl object-cover w-full h-auto"
-            />
-          </ScrollAnimation>
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollAnimation>
     </>
   );
 }
