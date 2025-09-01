@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { cn } from '@/lib/utils';
+import { GoogleAnalytics } from '@/components/google-analytics';
 
 const fontBody = Inter({
   subsets: ['latin'],
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   description: 'MoeMoe Enterprises offers professional courier and cleaning services in Atlanta, Tucker, and surrounding Georgia areas. Get a free quote for fast, reliable service.',
   keywords: ['courier service Atlanta', 'cleaning service Atlanta', 'delivery service Georgia', 'office cleaning Tucker GA', 'MoeMoe Enterprises'],
   openGraph: {
-    title: 'MoeMoe Enterprises | Reliable Courier & Cleaning in Atlanta, GA',
+    title: 'MoeMoe Enterprises | Reliable Courier & Cleaning in Atlanta',
     description: 'Fast, reliable, and professional services for your home and business needs.',
     url: 'https://moemoeenterprise.com',
     siteName: 'MoeMoe Enterprises',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MoeMoe Enterprises | Reliable Courier & Cleaning in Atlanta, GA',
+    title: 'MoeMoe Enterprises | Reliable Courier & Cleaning in Atlanta',
     description: 'Your trusted partner for courier and cleaning services in the greater Atlanta area.',
     images: ['/og-image.png'],
   },
@@ -113,6 +114,9 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("font-body antialiased bg-background text-foreground", fontBody.variable, fontHeadline.variable)}>
+        {process.env.NEXT_PUBLIC_GA_ID ? (
+            <GoogleAnalytics />
+        ) : null}
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">
