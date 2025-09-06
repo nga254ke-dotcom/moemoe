@@ -52,8 +52,16 @@ export default function Home() {
           </ScrollAnimation>
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollAnimation>
-              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col">
-                <CardHeader className="flex-col sm:flex-row items-start gap-4">
+              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col overflow-hidden">
+                 <Image 
+                    src="https://i.imgur.com/L66wKAW.png"
+                    alt="Courier van in a city"
+                    data-ai-hint="courier delivery"
+                    width={600}
+                    height={350}
+                    className="object-cover w-full h-52"
+                  />
+                <CardHeader className="flex-row items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg mt-1 shrink-0">
                     <Truck className="h-8 w-8 text-primary" />
                   </div>
@@ -76,8 +84,16 @@ export default function Home() {
               </Card>
             </ScrollAnimation>
             <ScrollAnimation delay={200}>
-              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col">
-                <CardHeader className="flex-col sm:flex-row items-start gap-4">
+              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col overflow-hidden">
+                <Image 
+                  src="https://i.imgur.com/iNxTKaX.png"
+                  alt="Modern office being cleaned"
+                  data-ai-hint="office cleaning"
+                  width={600}
+                  height={350}
+                  className="object-cover w-full h-52"
+                />
+                <CardHeader className="flex-row items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg mt-1 shrink-0">
                     <Sparkles className="h-8 w-8 text-primary" />
                   </div>
@@ -191,3 +207,5 @@ export default function Home() {
     </>
   );
 }
+
+    
