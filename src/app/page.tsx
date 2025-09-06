@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Truck, Sparkles, ShieldCheck, Clock, Users, ArrowRight } from 'lucide-react';
+import { Truck, Sparkles, ShieldCheck, Clock, Users, ArrowRight, MapPin, Star } from 'lucide-react';
 import { ScrollAnimation } from '@/components/scroll-animation';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
 
@@ -45,14 +45,14 @@ export default function Home() {
       <section id="services" className="py-12 md:py-20 bg-secondary">
         <div className="container max-w-7xl">
           <ScrollAnimation className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Professional Services</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Services at a Glance</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
               We offer specialized services to meet the unique demands of our Atlanta clients. From urgent deliveries to pristine workspaces, we have you covered.
             </p>
           </ScrollAnimation>
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollAnimation>
-              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full">
+              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col">
                 <CardHeader className="flex-col sm:flex-row items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg mt-1 shrink-0">
                     <Truck className="h-8 w-8 text-primary" />
@@ -62,20 +62,21 @@ export default function Home() {
                     <CardDescription className="mt-2">Fast, secure, and reliable deliveries across the greater Atlanta area.</CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                    <li>Same-day delivery for urgent documents</li>
-                    <li>Scheduled and recurring pickups</li>
-                    <li>Secure package and parcel transport</li>
+                <CardContent className="flex-grow flex flex-col">
+                  <ul className="space-y-3 text-muted-foreground list-disc list-inside flex-grow">
+                    <li>Same-day and scheduled deliveries</li>
+                    <li>Temperature-controlled options</li>
+                    <li>HIPAA-compliant for medical/lab deliveries</li>
+                    <li>Real-time tracking & secure handling</li>
                   </ul>
-                  <Button variant="link" className="px-0 mt-4 text-primary" asChild>
+                  <Button variant="link" className="px-0 mt-4 text-primary self-start" asChild>
                     <Link href="/services#courier">Learn More <span className="sr-only">about our Courier Services</span><ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardContent>
               </Card>
             </ScrollAnimation>
             <ScrollAnimation delay={200}>
-              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full">
+              <Card className="hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col">
                 <CardHeader className="flex-col sm:flex-row items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg mt-1 shrink-0">
                     <Sparkles className="h-8 w-8 text-primary" />
@@ -85,13 +86,14 @@ export default function Home() {
                     <CardDescription className="mt-2">Professional cleaning for commercial and residential properties.</CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                    <li>Office and commercial space cleaning</li>
-                    <li>Deep cleaning and sanitization</li>
-                    <li>Move-in/move-out cleaning services</li>
+                <CardContent className="flex-grow flex flex-col">
+                  <ul className="space-y-3 text-muted-foreground list-disc list-inside flex-grow">
+                    <li>Office & commercial cleaning</li>
+                    <li>Deep cleaning & move-in/move-out</li>
+                    <li>Eco-friendly products & flexible scheduling</li>
+                    <li>Trusted, background-checked staff</li>
                   </ul>
-                  <Button variant="link" className="px-0 mt-4 text-primary" asChild>
+                  <Button variant="link" className="px-0 mt-4 text-primary self-start" asChild>
                     <Link href="/services#cleaning">Learn More <span className="sr-only">about our Cleaning Services</span><ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardContent>
@@ -106,35 +108,53 @@ export default function Home() {
         <div className="container max-w-7xl">
          <ScrollAnimation>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Atlanta Chooses MoeMoe</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Choose MoeMoe</h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">Your satisfaction is our priority. We are committed to excellence in every job we undertake.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">
               <div className="flex flex-col items-center">
                 <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
                   <ShieldCheck className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Reliable & Trustworthy</h3>
+                <h3 className="text-xl font-bold">Licensed & Insured</h3>
                 <p className="mt-2 text-muted-foreground">
-                  Licensed and insured, you can trust us to handle your needs with integrity and professionalism.
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
-                  <Clock className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold">On-Time Guarantee</h3>
-                <p className="mt-2 text-muted-foreground">
-                  We value your time. Our services are prompt and efficient, ensuring we meet your deadlines, every time.
+                  We are fully licensed and insured for your peace of mind.
                 </p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
                   <Users className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">Customer-Focused</h3>
+                <h3 className="text-xl font-bold">Professional Staff</h3>
                 <p className="mt-2 text-muted-foreground">
-                  We tailor our services to your specific requirements and are always here to help. Your needs come first.
+                  Our drivers and cleaning crews are experienced and courteous.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
+                  <Clock className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">On-Time, Every Time</h3>
+                <p className="mt-2 text-muted-foreground">
+                  We value your time and guarantee prompt and efficient service.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
+                  <MapPin className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">Serving Metro Atlanta</h3>
+                <p className="mt-2 text-muted-foreground">
+                  Locally owned and operated, serving Atlanta and surrounding areas.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="p-4 bg-primary/10 rounded-full mb-4 ring-8 ring-primary/5">
+                  <Star className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold">5-Star Reviews</h3>
+                <p className="mt-2 text-muted-foreground">
+                  Our commitment to quality is backed by excellent customer feedback.
                 </p>
               </div>
             </div>
